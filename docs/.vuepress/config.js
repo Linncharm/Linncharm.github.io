@@ -2,7 +2,6 @@ import { blogPlugin } from '@vuepress/plugin-blog'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
-import {redirectPlugin} from "@vuepress/plugin-redirect";
 
 export default defineUserConfig({
   locales:{
