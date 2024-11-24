@@ -12,12 +12,12 @@ actions:
     type: secondary
 
 features:
-  - title: 简约至上
-    details: 基于极简风格构建的博客
-  - title: 前端技术
-    details: 记录每天学习的前端技术
-  - title: 坚持
-    details: 熟能生巧，坚持每天学习
+  - title: Simplicity First
+    details: A blog built with a minimalist style
+  - title: Frontend Technology
+    details: Documenting daily learning of frontend technologies
+  - title: Perseverance
+    details: Practice makes perfect, keep learning every day
 
 footer: MIT Licensed | Copyright © 2018-present VuePress Community
 ---
