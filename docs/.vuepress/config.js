@@ -2,38 +2,88 @@ import { blogPlugin } from '@vuepress/plugin-blog'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
+import {redirectPlugin} from "@vuepress/plugin-redirect";
 
 export default defineUserConfig({
-  lang: 'en-US',
-
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  locales:{
+    '/':{
+      lang: 'en-US',
+      title: 'Linncharm\'s Blog',
+      description: 'My first blog site based on VuePress',
+    },
+    '/zh/': {
+      lang: 'zh-CN',
+      title: 'Linncharm的博客',
+      description: '基于VuePress的第一个博客站点',
+    },
+  },
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
+    repo: 'https://github.com/Linncharm',
+    locales:{
+      '/':{
+        selectLanguageName: 'English',
+        selectLanguageText: 'Languages',
+        repoLabel: 'GitHub',
+        navbar: [
+          {
+            text: 'Article',
+            link: '/en/article/',
+          },
+          {
+            text: 'Category',
+            link: '/en/category/',
+          },
+          {
+            text: 'Tag',
+            link: '/en/tag/',
+          },
+          {
+            text: 'Timeline',
+            link: '/en/timeline/',
+          }
+        ]
+      },
+      '/zh/':{
+        selectLanguageName: '简体中文',
+        selectLanguageText: '选择语言',
+        repoLabel: 'GitHub',
+        navbar: [
+          {
+              text: '文章',
+              link: '/zh/article/',
+          },
+          {
+              text: '分类',
+              link: '/zh/category/',
+          },
+          {
+              text: '标签',
+              link: '/zh/tag/',
+          },
+          {
+              text: '时间线',
+              link: '/zh/timeline/',
+          },
+          {
+              text: '更多',
+              children: [
+                { text: '子菜单1', link: '/zh/submenu1/' },
+                { text: '子菜单2', link: '/zh/submenu2/' },
+              ],
+          },
+        ]
 
-    navbar: [
-      '/',
-      {
-        text: 'Article',
-        link: '/article/',
       },
-      {
-        text: 'Category',
-        link: '/category/',
-      },
-      {
-        text: 'Tag',
-        link: '/tag/',
-      },
-      {
-        text: 'Timeline',
-        link: '/timeline/',
-      },
-    ],
+    },
   }),
 
   plugins: [
+    // redirectPlugin({
+    //   autoLocale: true,
+    //   defaultLocale: '/en/',
+    // }),
     blogPlugin({
       // Only files under posts are articles
       filter: ({ filePathRelative }) =>

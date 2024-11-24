@@ -3,21 +3,21 @@ home: true
 title: Home
 heroImage: https://vuejs.press/images/hero.png
 actions:
-  - text: Enter Blog
+  - text: 进入博客
     link: /getting-started.html
     type: primary
 
-  - text: Introduction
+  - text: 介绍
     link: https://vuejs.press/guide/introduction.html
     type: secondary
 
 features:
-  - title: Simplicity First
-    details: A blog built with a minimalist style
-  - title: Frontend Technology
-    details: Documenting daily learning of frontend technologies
-  - title: Perseverance
-    details: Practice makes perfect, keep learning every day
+  - title: 简约至上
+    details: 基于极简风格构建的博客
+  - title: 前端技术
+    details: 记录每天学习的前端技术
+  - title: 坚持
+    details: 熟能生巧，坚持每天学习
 
 ---
 
