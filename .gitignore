@@ -1,2 +1,7 @@
 node_modules
-./docs/.vuepress
+/src/.vuepress/.cache
+/src/.vuepress/.temp
+/src/.vuepress/navbar
+/src/.vuepress/public
+/src/.vuepress/styles
+/src/.vuepress/sidebar
